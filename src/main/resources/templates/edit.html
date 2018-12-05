@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Edit data of person</h1>
+
+<p th:text="${person}"/>
+
+<form action="/people" method="post" th:object="${person}">
+   <!-- <input th:field="*{id}" type="hidden"/> -->
+    <input th:field="*{name}"/>
+    <input th:field="*{surname}"/>
+    <input type="submit" value="Edit">
+</form>
+
+</body>
+</html>
